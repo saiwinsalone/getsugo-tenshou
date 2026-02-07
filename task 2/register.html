@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Getsuga Tech Event</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --accent-red: #ff0033;
+            --accent-orange: #ff8c00;
+            --text-main: #ffffff;
+            --glass-bg: rgba(15, 15, 15, 0.95);
+            --input-bg: #111;
+        }
+
+        /* --- THE SAME CUSTOM CROSSHAIR CURSOR --- */
+        html, body {
+            cursor: crosshair; 
+            cursor: url('https://cur.cursors-4u.net/games/gam-4/gam382.cur'), crosshair;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* --- SPIRIT PRESSURE MOUSE GLOW --- */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 0, 51, 0.15) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 600px; /* Slimmer for form focus */
+            margin: 60px auto;
+            background: var(--glass-bg);
+            border: 1px solid #222;
+            border-top: 5px solid var(--accent-red);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        nav {
+            padding: 25px;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #888;
+            margin: 0 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            font-size: 0.8rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-red);
+            text-shadow: 0 0 10px var(--accent-red);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 40px 0;
+            font-family: 'Impact', sans-serif;
+            background: linear-gradient(to bottom, #fff 20%, var(--accent-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        form {
+            padding: 0 40px 40px 40px;
+        }
+
+        label {
+            color: var(--accent-orange);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 25px;
+            background: var(--input-bg);
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+            box-sizing: border-box; /* Prevents overflow */
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 15px rgba(255, 0, 51, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            color: var(--accent-red);
+            border: 2px solid var(--accent-red);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: var(--accent-red);
+            color: white;
+            box-shadow: 0 0 20px var(--accent-red);
+        }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid #222;
+        }
+
+        .getsuga-mark {
+            display: block;
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            color: var(--accent-red);
+            letter-spacing: 8px;
+            font-weight: bold;
+            text-shadow: 0 0 15px var(--accent-red);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="register.html">Register</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <h1>Register for the Event</h1>
+
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Your Name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="email@domain.com">
+
+            <label>Domain of Interest:</label>
+            <select>
+                <option>Web Development</option>
+                <option>AI / ML</option>
+                <option>Cyber Security</option>
+                <option>Cloud Computing</option>
+            </select>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+
+        <footer>
+            <p>© 2026 Tech Event. All rights reserved.</p>
+            <span class="getsuga-mark">GETSUGA TENSHOU</span>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', e => {
+            document.body.style.setProperty('--x', e.clientX + 'px');
+            document.body.style.setProperty('--y', e.clientY + 'px');
+        });
+    </script>
+
+</body>
+</html>
